@@ -21,17 +21,14 @@ def cipher(message, offset, direction=1):
             if i.isalpha():
                 index = ALPHABET.find(i)
                 new_text += ALPHABET[(index + offset) % len(ALPHABET)]
-                print(i, index)
             else:
                 new_text += i
         else:
             if i.isalpha():
                 index = ALPHABET.find(i)
                 new_text += ALPHABET[(index - offset) % len(ALPHABET)]
-                print(i, index)
             else:
                 new_text += i
-    print(new_text)
 
 def encrypt(message, offset):
     return cipher(message, offset)
